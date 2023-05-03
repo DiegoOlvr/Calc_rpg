@@ -54,8 +54,8 @@
                         <span class="thMenor">Força</span>
                     </th>
                     <td><input type="text" id="FOR_BASE" class="campoTabela for base"></td>
-                    <td><input type="text" id="FOR_RACA" class="campoTabela for raca"></td>
-                    <td><input type="text" class="campoTabela for total" disabled></td>
+                    <td><input type="text" id="FOR_RACA" class="campoTabela for raca" disabled></td>
+                    <td><input type="text" id="FOR_TOTAL" class="campoTabela for total" disabled></td>
                     <td><input type="text" class="campoTabela for mod" disabled></td>
                     <td><input type="text" class="campoTabela for custo" disabled></td>
                 </tr>
@@ -65,8 +65,8 @@
                         <span class="thMenor">Destreza</span>
                     </th>
                     <td><input type="text" id="DES_BASE" class="campoTabela des base"></td>
-                    <td><input type="text" id="DES_RACA" class="campoTabela des raca"></td>
-                    <td><input type="text" class="campoTabela des total" disabled></td>
+                    <td><input type="text" id="DES_RACA" class="campoTabela des raca" disabled></td>
+                    <td><input type="text" id="DES_TOTAL" class="campoTabela des total" disabled></td>
                     <td><input type="text" class="campoTabela des mod" disabled></td>
                     <td><input type="text" class="campoTabela des custo" disabled></td>
                 </tr>
@@ -76,8 +76,8 @@
                         <span class="thMenor">Constituição</span>
                     </th>
                     <td><input type="text" id="CON_BASE" class="campoTabela con base"></td>
-                    <td><input type="text" id="CON_RACA" class="campoTabela con raca"></td>
-                    <td><input type="text" class="campoTabela con total" disabled></td>
+                    <td><input type="text" id="CON_RACA" class="campoTabela con raca" disabled></td>
+                    <td><input type="text" id="CON_TOTAL" class="campoTabela con total" disabled></td>
                     <td><input type="text" class="campoTabela con mod" disabled></td>
                     <td><input type="text" class="campoTabela con custo" disabled></td>
                 </tr>
@@ -87,8 +87,8 @@
                         <span class="thMenor">Inteligência</span>
                     </th>
                     <td><input type="text" id="INT_BASE" class="campoTabela int base"></td>
-                    <td><input type="text" id="INT_RACA" class="campoTabela int raca"></td>
-                    <td><input type="text" class="campoTabela int total" disabled></td>
+                    <td><input type="text" id="INT_RACA" class="campoTabela int raca" disabled></td>
+                    <td><input type="text" id="INT_TOTAL" class="campoTabela int total" disabled></td>
                     <td><input type="text" class="campoTabela int mod" disabled></td>
                     <td><input type="text" class="campoTabela int custo" disabled></td>
                 </tr>
@@ -98,8 +98,8 @@
                         <span class="thMenor">Sabedoria</span>
                     </th>
                     <td><input type="text" id="SAB_BASE" class="campoTabela sab base"></td>
-                    <td><input type="text" id="SAB_RACA" class="campoTabela sab raca"></td>
-                    <td><input type="text" class="campoTabela sab total" disabled></td>
+                    <td><input type="text" id="SAB_RACA" class="campoTabela sab raca" disabled></td>
+                    <td><input type="text" id="SAB_TOTAL" class="campoTabela sab total" disabled></td>
                     <td><input type="text" class="campoTabela sab mod" disabled></td>
                     <td><input type="text" class="campoTabela sab custo" disabled></td>
                 </tr>
@@ -109,22 +109,28 @@
                         <span class="thMenor">Carisma</span>
                     </th>
                     <td><input type="text" id="CAR_BASE" class="campoTabela car base"></td>
-                    <td><input type="text" id="CAR_RACA" class="campoTabela car raca"></td>
-                    <td><input type="text" class="campoTabela car total" disabled></td>
+                    <td><input type="text" id="CAR_RACA" class="campoTabela car raca" disabled></td>
+                    <td><input type="text" id="CAR_TOTAL" class="campoTabela car total" disabled></td>
                     <td><input type="text" class="campoTabela car mod" disabled></td>
                     <td><input type="text" class="campoTabela car custo" disabled></td>
                 </tr>
             </table>
         </section>
-        <section id="opcoes">
+        <section id="botoes">
+            <div>
+                <input class="calcular" type="button" value="Calcular" id="calcular">
+                <input class="resetar" type="button" value="Resetar" id="resetar">
+            </div>
+        </section>
+        <!-- <section id="opcoes">
             <label class="containerCheckbox">
                 <input type="checkbox" id="foraDoIntervalo">
                 <span class="textoCheckbox">Permitir valores base menores que 7 e maiores que 18</span>
             </label>
-        </section>
+        </section> -->
     </main>
     <footer>
-        <div class="caixaFooter">Desenvolvido por Diego Ramos<a href="" target="_blank"></a>.
+        <div class="caixaFooter">Desenvolvido por <a href="" target="_blank">Aluno Ctrl+Play</a>.
         </div>
     </footer>
     <script src="JavaScript\script.js"></script>

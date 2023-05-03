@@ -350,7 +350,8 @@ ul.dropdown-lista::-webkit-scrollbar-thumb {
     top: 16rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%) text-align:center;
+    transform: translateX(-50%);
+    text-align: center;
     z-index: 100;
     display: none
 }
@@ -410,4 +411,23 @@ ul.dropdown-lista::-webkit-scrollbar-thumb {
 .containerAlertaBotao {
     text-align: center;
     width: 24rem
+}
+
+#botoes {
+    display: flex;
+    justify-content: left;
+    padding-left: 6px;
+}
+
+.calcular,
+.resetar {
+    text-transform: uppercase;
+    color: #d1ba91;
+    background-color: #2b2720;
+    min-height: 2.5rem;
+    width: auto;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    min-width: 4rem;
+    text-align: center !important;
 }

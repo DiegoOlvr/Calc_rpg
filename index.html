@@ -23,6 +23,7 @@
                         </div>
                     </td>
                     <th class="thHabilidades">Valor</th>
+                    <th class="thHabilidades">D20</th>
                     <th class="thModificadores">MOD</th>
                     <th class="thCusto">Total</th>
                 </tr>
@@ -32,7 +33,8 @@
                         <span class="thMenor">Força</span>
                     </th>
                     <td><input type="text" id="FOR_BASE" class="campoTabela for base"></td>
-                    <td><input type="text" class="campoTabela for mod" disabled></td>
+                    <td><input type="text" id="for_d20" class="campoTabela for d20" disabled></td>
+                    <td><input type="text" id="for_mod" class="campoTabela for mod" disabled></td>
                     <td><input type="text" class="campoTabela for custo" disabled></td>
                 </tr>
                 <tr>
@@ -41,7 +43,8 @@
                         <span class="thMenor">Destreza</span>
                     </th>
                     <td><input type="text" id="DES_BASE" class="campoTabela des base"></td>
-                    <td><input type="text" class="campoTabela des mod" disabled></td>
+                    <td><input type="text" id="des_d20" class="campoTabela des d20" disabled></td>
+                    <td><input type="text" id="des_mod" class="campoTabela des mod" disabled></td>
                     <td><input type="text" class="campoTabela des custo" disabled></td>
                 </tr>
                 <tr>
@@ -50,7 +53,8 @@
                         <span class="thMenor">Constituição</span>
                     </th>
                     <td><input type="text" id="CON_BASE" class="campoTabela con base"></td>
-                    <td><input type="text" class="campoTabela con mod" disabled></td>
+                    <td><input type="text" id="con_d20" class="campoTabela con d20" disabled></td>
+                    <td><input type="text" id="con_mod" class="campoTabela con mod" disabled></td>
                     <td><input type="text" class="campoTabela con custo" disabled></td>
                 </tr>
                 <tr>
@@ -59,7 +63,8 @@
                         <span class="thMenor">Inteligência</span>
                     </th>
                     <td><input type="text" id="INT_BASE" class="campoTabela int base"></td>
-                    <td><input type="text" class="campoTabela int mod" disabled></td>
+                    <td><input type="text" id="int_d20" class="campoTabela int d20" disabled></td>
+                    <td><input type="text" id="int_mod" class="campoTabela int mod" disabled></td>
                     <td><input type="text" class="campoTabela int custo" disabled></td>
                 </tr>
                 <tr>
@@ -68,7 +73,8 @@
                         <span class="thMenor">Sabedoria</span>
                     </th>
                     <td><input type="text" id="SAB_BASE" class="campoTabela sab base"></td>
-                    <td><input type="text" class="campoTabela sab mod" disabled></td>
+                    <td><input type="text" id="sab_d20" class="campoTabela sab d20" disabled></td>
+                    <td><input type="text" id="sab_mod" class="campoTabela sab mod" disabled></td>
                     <td><input type="text" class="campoTabela sab custo" disabled></td>
                 </tr>
                 <tr>
@@ -77,7 +83,8 @@
                         <span class="thMenor">Carisma</span>
                     </th>
                     <td><input type="text" id="CAR_BASE" class="campoTabela car base"></td>
-                    <td><input type="text" class="campoTabela car mod" disabled></td>
+                    <td><input type="text" id="car_d20" class="campoTabela car d20" disabled></td>
+                    <td><input type="text" id="car_mod" class="campoTabela car mod" disabled></td>
                     <td><input type="text" class="campoTabela car custo" disabled></td>
                 </tr>
             </table>
@@ -85,6 +92,7 @@
         <section id="botoes">
             <div>
                 <input class="calcular" type="button" value="Calcular" id="calcular">
+                <input class="calcular" type="button" value="Rodar dado" id="dado">
                 <input class="resetar" type="button" value="Resetar" id="resetar">
             </div>
         </section>

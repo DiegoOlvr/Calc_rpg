@@ -1,14 +1,18 @@
-var FORCA = document.getElementById("FOR_BASE");
-var DESTREZA = document.getElementById("DES_BASE");
-var CONSTITUICAO = document.getElementById("CON_BASE");
-var INTELIGENCIA = document.getElementById("INT_BASE");
-var SABEDORIA = document.getElementById("SAB_BASE");
-var CARISMA = document.getElementById("CAR_BASE");
-var TOTAL_PTS = document.getElementsByClassName("valorPontos")[0];
+let FORCA = document.getElementById("FOR_BASE");
+let DESTREZA = document.getElementById("DES_BASE");
+let CONSTITUICAO = document.getElementById("CON_BASE");
+let INTELIGENCIA = document.getElementById("INT_BASE");
+let SABEDORIA = document.getElementById("SAB_BASE");
+let CARISMA = document.getElementById("CAR_BASE");
+let TOTAL_PTS = document.getElementsByClassName("valorPontos")[0];
+let BOTAO_DADO = document.getElementById("dado")
+let CALC_BTN = document.getElementById("calcular");
+let RESETAR_BTN = document.getElementById("resetar");
 
-var calc_btn = document.getElementById("calcular");
 
-calc_btn.addEventListener('click', calcular);
+CALC_BTN.addEventListener('click', calcular);
+RESETAR_BTN.addEventListener('click', recarregar_pagina);
+BOTAO_DADO.addEventListener('click', campos_d20);
 
 function calcular() {
 
@@ -32,8 +36,69 @@ function calcular() {
         Number(TOTAL_INTELIGENCIA.value) +
         Number(TOTAL_SABEDORIA.value) +
         Number(TOTAL_CARISMA.value);
-    
-    TOTAL_PTS.innerHTML = Number(TOTAL_PTS.innerHTML) - SOMA;
 
-    
+    TOTAL_PTS.innerHTML = Number(TOTAL_PTS.innerHTML) - SOMA;
+}
+
+function gerar_numero_aleatorio() {
+    let array_numeros_aleatorios = [];
+
+    for (let i = 0; i < 6; i++) {
+        array_numeros_aleatorios[i] = Math.floor(20 * Math.random() + 1);
+    }
+    return array_numeros_aleatorios;
+}
+
+function campos_d20() {
+    let for_d20 = document.getElementById("for_d20");
+    let des_d20 = document.getElementById("des_d20");
+    let con_d20 = document.getElementById("con_d20");
+    let int_d20 = document.getElementById("int_d20");
+    let sab_d20 = document.getElementById("sab_d20");
+    let car_d20 = document.getElementById("car_d20");
+
+    numeros_d20 = gerar_numero_aleatorio();
+
+    for_d20.value = numeros_d20[0];
+    des_d20.value = numeros_d20[1];
+    con_d20.value = numeros_d20[2];
+    int_d20.value = numeros_d20[3];
+    sab_d20.value = numeros_d20[4];
+    car_d20.value = numeros_d20[5];
+
+    modificador(numeros_d20);
+}
+
+function recarregar_pagina() {
+    window.location.reload(true);
+}
+
+function modificador(numeros_aleatorios) {
+    let for_mod = document.getElementById("for_mod");
+    let des_mod = document.getElementById("des_mod");
+    let con_mod = document.getElementById("con_mod");
+    let int_mod = document.getElementById("int_mod");
+    let sab_mod = document.getElementById("sab_mod");
+    let car_mod = document.getElementById("car_mod");
+    numeros_d20 = numeros_aleatorios;
+    let mod = []
+
+    for (let i = 0; i < 6; i++) {
+        valor = numeros_d20[i];
+        console.log(numeros_d20);
+        console.log(valor);
+        if (valor > 15) {
+            mod[i] = Math.round(1 + (valor / 1.2));
+        } else if (valor > 7) {
+            mod[i] = (0 + (valor / 1.2)).toFixed(0);
+        } else {
+            mod[i] = Math.round(-1 + (valor / 1.2));
+        }
+    }
+    for_mod.value = mod[0];
+    des_mod.value = mod[1];
+    con_mod.value = mod[2];
+    int_mod.value = mod[3];
+    sab_mod.value = mod[4];
+    car_mod.value = mod[5];
 }

@@ -9,6 +9,14 @@ let BOTAO_DADO = document.getElementById("dado")
 let CALC_BTN = document.getElementById("calcular");
 let RESETAR_BTN = document.getElementById("resetar");
 
+// Marcadores de modificadores
+let for_mod = document.getElementById("for_mod");
+let des_mod = document.getElementById("des_mod");
+let con_mod = document.getElementById("con_mod");
+let int_mod = document.getElementById("int_mod");
+let sab_mod = document.getElementById("sab_mod");
+let car_mod = document.getElementById("car_mod");
+
 
 CALC_BTN.addEventListener('click', calcular);
 RESETAR_BTN.addEventListener('click', recarregar_pagina);
@@ -23,21 +31,12 @@ function calcular() {
     let TOTAL_SABEDORIA = document.getElementById('SAB_TOTAL');
     let TOTAL_CARISMA = document.getElementById('CAR_TOTAL');
 
-    TOTAL_FORCA.value = Number(FORCA.value);
-    TOTAL_DESTREZA.value = Number(DESTREZA.value);
-    TOTAL_CONSTITUICAO.value = Number(CONSTITUICAO.value);
-    TOTAL_INTELIGENCIA.value = Number(INTELIGENCIA.value);
-    TOTAL_SABEDORIA.value = Number(SABEDORIA.value);
-    TOTAL_CARISMA.value = Number(CARISMA.value);
-
-    SOMA = Number(TOTAL_FORCA.value) +
-        Number(TOTAL_DESTREZA.value) +
-        Number(TOTAL_CONSTITUICAO.value) +
-        Number(TOTAL_INTELIGENCIA.value) +
-        Number(TOTAL_SABEDORIA.value) +
-        Number(TOTAL_CARISMA.value);
-
-    TOTAL_PTS.innerHTML = Number(TOTAL_PTS.innerHTML) - SOMA;
+    TOTAL_FORCA.value = Number(FORCA.value) + Number(for_mod.value);
+    TOTAL_DESTREZA.value = Number(DESTREZA.value) + Number(des_mod.value);
+    TOTAL_CONSTITUICAO.value = Number(CONSTITUICAO.value) + Number(con_mod.value);
+    TOTAL_INTELIGENCIA.value = Number(INTELIGENCIA.value) + Number(int_mod.value);
+    TOTAL_SABEDORIA.value = Number(SABEDORIA.value) + Number(sab_mod.value);
+    TOTAL_CARISMA.value = Number(CARISMA.value) + Number(car_mod.value);
 }
 
 function gerar_numero_aleatorio() {
